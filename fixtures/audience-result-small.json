@@ -1,0 +1,10 @@
+{
+  "evidence_label": "SYNTHETIC_SCENARIO",
+  "scenario_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "model_version": "0.1.0",
+  "arms": {"baseline": {"adoption_share": {"mean": 0.5}}},
+  "paired_effects": {
+    "basic-discount": {"adoption_share": {"mean": 0.01}},
+    "pro-quality": {"adoption_share": {"mean": 0.015}}
+  }
+}

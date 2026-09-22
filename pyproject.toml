@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a2z-decision-world"
+version = "0.1.0"
+description = "Inspectible intervention planning across demand, inventory, service capacity, and economics"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.scripts]
+decision-world = "decision_world.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["decision_world*"]

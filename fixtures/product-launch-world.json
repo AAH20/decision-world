@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "world_id": "synthetic-software-launch",
+  "horizon_days": 7,
+  "runs": 80,
+  "seed": 1845,
+  "baseline": {
+    "daily_demand": 92,
+    "demand_volatility": 0.15,
+    "price": 49,
+    "unit_cost": 18,
+    "inventory": 620,
+    "price_elasticity": 0.9,
+    "ticket_rate": 0.20,
+    "support_capacity_per_day": 14,
+    "support_cost_per_slot_day": 2.5,
+    "backlog_penalty_per_ticket_day": 3.5,
+    "marketing_cost_per_day": 190
+  },
+  "interventions": [
+    {"id": "basic-discount", "demand_lift": 0.03, "price_delta": -5, "ticket_rate_delta": 0, "support_capacity_delta": 0, "setup_cost": 0, "daily_cost": 0, "required_capability": "pricing.change"},
+    {"id": "pro-quality", "demand_lift": 0.04, "price_delta": 0, "ticket_rate_delta": -0.04, "support_capacity_delta": 0, "setup_cost": 250, "daily_cost": 35, "required_capability": "product.release"},
+    {"id": "support-surge", "demand_lift": 0, "price_delta": 0, "ticket_rate_delta": 0, "support_capacity_delta": 7, "setup_cost": 50, "daily_cost": 0, "required_capability": "staffing.schedule"},
+    {"id": "marketing-push", "demand_lift": 0.08, "price_delta": 0, "ticket_rate_delta": 0.01, "support_capacity_delta": 0, "setup_cost": 25, "daily_cost": 140, "required_capability": "campaign.spend"}
+  ],
+  "limits": {"max_setup_cost": 300, "max_extra_daily_cost": 150, "max_interventions": 2, "risk_weight": 0.4},
+  "economics": {"compute_cost_per_1000_world_steps": 0.02, "storage_cost_per_plan": 0.005, "operating_allowance_fraction": 0.3}
+}
